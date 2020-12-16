@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500&display=swap');
+
+*,
+*::after,
+*::before {
+   box-sizing: border-box;
+
+   margin: 0;
+   padding: 0;
+}
+
+html {
+   font-size: 10px;
+}
+
+img {
+   max-width: 100%;
+   display: block;
+}
+
+
+/* Typography */
+body {
+   font-family: 'Noto Sans TC', sans-serif;
+}
+
+h1 {
+   font-size: clamp(3rem, 10vw, 4.65rem);
+   text-transform: uppercase;
+   text-align: center;
+   margin: 2rem 0;
+}
+
+h2 {
+   font-size: clamp(2rem, 7vw, 2.75rem);
+   margin-bottom: 1rem;
+}
+
+.book-title {
+   font-size: clamp(1rem, 4vw, 1.5rem);
+   margin-bottom: 0.15rem;
+}
+
+.book-author {
+   color: #555;
+   font-size: clamp(0.5rem, 4vw, 1rem);
+   text-transform: uppercase;
+}
+
+label {
+   font-size: clamp(2rem, 4vw, 1.5rem); 
+   font-weight: 600;
+   text-transform: uppercase;
+   padding: 2rem 0 0.75rem 0;
+}
+
+
+/* Utilities */
+.btn {
+   border: none;
+   outline: solid 1px #333;
+   background-color: transparent;
+   font-family: inherit;
+   text-transform: uppercase;
+   cursor: pointer;
+   transition: all ease-in-out 0.2s;
+
+   width: 100%;
+   padding: 0.5rem 2rem;
+}
+
+.btn--book {
+   outline: none;
+   border: 1px solid transparent;
+   font-size: 1rem;
+   padding: 0.5rem 0.75rem;
+   width: 7rem;
+}
+
+.btn-form--inv {
+   color: #fff;
+   background-color: #666;
+   outline: solid 1px #555;
+}
+
+.btn:hover {
+   color: #fff;
+   background-color: #333;
+}
+
+
+.btn-form--inv:hover {
+   color: #333;
+   background-color: #f3f3f3;
+   outline: solid 1px #bbb;
+}
+
+
+/* Layout */
+.library {
+   width: min(400px, 90%);
+   margin: 0rem auto;
+   display: flex;
+   flex-direction: column;
+   align-items: space-around;
+   justify-content: center;
+}
+
+.read {
+   margin-bottom: 4rem;
+}
+
+.to-read {
+   margin-bottom: 6rem;
+}
+
+.book {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.book + .book {
+   border-top: 1px solid #d3d3d3;
+   padding-top: 1rem;
+   margin-top: 1rem;
+}
+
+
+/* Form */
+.form-popup {
+   background-color: #fff;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 100vh;
+   padding: 2rem 0;
+   z-index: 1;
+
+   display: none;
+   opacity: 0;
+
+   transition: opacity ease-in-out 0.2s;
+}
+
+
+.active {
+   display: block;
+}
+
+.form-container {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   position: relative;
+   margin: 0 auto;
+   width: min(400px, 90%);
+   height: 95%;
+}
+
+.input-container {
+  padding-bottom: 10rem;
+}
+
+.btn-container {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+.close-form {
+   position: absolute;
+   top: 10px;
+   right: 10px;
+
+   text-decoration: none;
+   background-color: transparent;
+   border: none;
+   cursor: pointer;
+   transition: all ease-in-out 0.1s;
+}
+
+.close-form:hover {
+   color: rgb(185, 0, 0);
+}
+
+.form-popup label,
+.form-popup input {
+   display: block;
+   width: 100%;
+}
+
+.form-popup label,
+.btn-form
+ {
+   margin-top: 2rem;
+}
+
+input {
+   border: none;
+   border-bottom: solid 1px #666;
+   padding: 0.5rem 0.1rem;
+}
+
+
+/* Footer */
+.site {
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+}
+
+.site-content {
+   flex: 1;
+}
+
+.footer-link {
+   display: block;
+   width: 50px;
+   margin: 1rem;
+   transition: transform 0.2s ease-in-out;
+   z-index: 100;
+}
+
+.footer-link:hover {
+   cursor: pointer;
+   transform: scale(1.1);
+}
