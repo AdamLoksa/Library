@@ -5,7 +5,6 @@ const formButtons = document.querySelectorAll('.form-popup button');
 // Book library
 const library = JSON.parse(localStorage.getItem('books-list')) || [];
 
-
 //Obj constructor
 class Book {
    constructor(title, author, readingStatus, bookID) {
